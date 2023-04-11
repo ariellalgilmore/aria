@@ -12,8 +12,5 @@ jobs:
     - name: Check PR
       uses: JJ/github-pr-contains-action@releases/v10
       with:
-        github-token: ${{ secrets.GH_TOKEN }}
-        bodyDoesNotContain: ''
-        bodyContains: ''
-        diffContains: ''
+        github-token: ${{github.token}}
         diffDoesNotContain: " must | must not | should | should not | may"
